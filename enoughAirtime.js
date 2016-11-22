@@ -1,11 +1,28 @@
-const assert = require('assert');
-var enoughAirtime = ['call,call,call,data,sms,sms,call,data']
-var data = function(totalPhoneBill){
-var sum = (50-(4 * 1.88 + 2 *12 + 3*0.55));
-console.log(sum);
-return sum;
-for (var i=0;i<enoughAirtime.length; i++){
-    data.push(enoughAirtime[i]);
-}
-}
-assert.equal(data(),16.83);
+const assert = require('assert')
+var enoughAir = 'call,call,call,data,sms,sms,call,data';
+var Airtime = function(Air){
+  var AirT = Air.split(',');
+  var total = 0;
+
+  for(var i=0;i<AirT.length; i++){
+    switch (AirT[i]) {
+      case 'call':
+        total = total + 1.88;
+        break;
+
+      case 'data':
+        total = total + 0.75
+        break;
+
+      case 'sms':
+        total = total + 12;
+
+      default:
+      total = total + 0
+
+    }
+  }
+  console.log((50 - total).toFixed(2));
+return 50 - total;
+};
+assert.equal(Airtime(enoughAir).toFixed(2),16.98);

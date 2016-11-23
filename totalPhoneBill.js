@@ -1,5 +1,4 @@
 const assert = require('assert');
-var enoughAirtime = 'call,sms,call,sms,sms';
 var totalPhoneBill = function(data){
   var dataList = data.split(",");
   var total = 0;
@@ -20,4 +19,5 @@ var totalPhoneBill = function(data){
 
 };
 //console.log(total);
-assert.equal(totalPhoneBill(enoughAirtime).toFixed(2),7.45);
+totalPhoneBill('call,sms,call,sms,sms');
+assert.equal(totalPhoneBill('call,sms,call,sms,sms').toFixed(2), 7.45);

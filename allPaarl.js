@@ -1,3 +1,4 @@
+
 var reg = 'CJ1233, CA5879,GP4665,CJ8989,CA1995';
 function allPaarl(reg){
 var allPaarlreg = reg.split(',');

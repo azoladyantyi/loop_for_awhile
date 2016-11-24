@@ -10,11 +10,11 @@ var Airtime = function(Air){
         total = total + 1.88;
         break;
 
-      case 'data':
+      case 'sms':
         total = total + 0.75
         break;
 
-      case 'sms':
+      case 'data':
         total = total + 12;
 
       default:

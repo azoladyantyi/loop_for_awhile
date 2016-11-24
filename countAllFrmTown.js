@@ -10,12 +10,8 @@ var allFromTown = function(Stel, Kul) {
 
     }
   }
-  return regNumber;
+  return regNumber.length;
 };
 var fromStellies = allFromTown('CL 124,CY 567,CL 345, CJ 456,CL 341','CL');
 console.log(fromStellies);
-assert.deepEqual(fromStellies, ['CL 124', 'CL 345', 'CL 341']);
-
-var fromKuilsriver = allFromTown('CL 124,CY 567,CL 345, CJ 456,CL 341','CF');
-console.log(fromKuilsriver);
-assert.deepEqual(fromKuilsriver, []);
+assert.deepEqual(fromStellies, 3);
